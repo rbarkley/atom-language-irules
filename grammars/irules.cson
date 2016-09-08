@@ -50,17 +50,10 @@
   'event':
     'patterns': [
       {
-        'begin': '^\\s+(when)\\s'
-        'beginCaptures':
+        'match': '(RULE_INIT|LB_.*|DB_.*|DIAMETER_.*|DNS_.*|FIX_.*|HTTP_.*|CLIENT_.*|SERVER_.*|CACHE_.*|SIP_.*|CLIENTSSL_.*|SERVERSSL_.*|X509_.*)\\S'
+        'captures':
           '1':
-            'name': 'normal.character.f5networks'
-        'end': '\\{'
-        'patterns': [
-          {
-            'match': '(RULE_INIT|LB_.*|DB_.*|DIAMETER_.*|DNS_.*|FIX_.*|HTTP_.*|CLIENT_.*|SERVER_.*|CACHE_.*|SIP_.*|CLIENTSSL_.*|SERVERSSL_.*|X509_.*)'
-            'name': 'entity.character.f5networks'
-          }
-        ]
+            'name': 'keyword.other.f5networks'
       }
     ]
   'set_global_variables':
@@ -106,7 +99,7 @@
   'irule_commands':
     'patterns': [
       {
-        'match': '(\\w+::\\w+|reject|connect)'
+        'match': '(\\w+::\\w+|reject|connect|log)\\s'
         'captures':
           '1':
             'name': 'constant.character.f5networks'
