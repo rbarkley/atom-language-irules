@@ -106,7 +106,7 @@
   'irule_commands':
     'patterns': [
       {
-        'match': '(\\w+::\\w+|reject|log|connect)'
+        'match': '(\\w+::\\w+|reject|connect)'
         'captures':
           '1':
             'name': 'constant.character.f5networks'
