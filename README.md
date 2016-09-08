@@ -8,4 +8,7 @@ This language package provides highlighting for iRules for the BIGIP devices.
 - .irule
 
 Contributions are welcome!
-https://github.com/rbarkley/atom-language-irules
+
+This is initially heavily based on the previous work from the following users:
+https://github.com/jessed/ &
+https://github.com/dhomoney/
